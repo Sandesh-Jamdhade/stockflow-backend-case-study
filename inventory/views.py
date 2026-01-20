@@ -12,6 +12,11 @@ from .models import (
 )
 from .serializers import ProductCreateSerializer
 
+class HomeAPI(APIView):
+    def get(self, request):
+        return Response({"message": "StockFlow Backend Running "})
+
+
 
 class CreateProductAPI(APIView):
     def post(self, request):
